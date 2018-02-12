@@ -75,6 +75,7 @@ Run `cv/example_demo.ipynb` for demo.
 This project is maintained by [Licheng Yu](cs.unc.edu/~licheng/).
 
 ## Citation
+
     @article{yu2018mattnet,
       title={MAttNet: Modular Attention Network for Referring Expression Comprehension},
       author={Yu, Licheng and Lin, Zhe and Shen, Xiaohui and Yang, Jimei and Lu, Xin and Bansal, Mohit and Berg, Tamara L},
