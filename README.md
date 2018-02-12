@@ -4,6 +4,11 @@ Modular Attention Network for Referring Expression Comprehension
 ## Introduction
 
 This repository is Pytorch implementation of [MattNet](https://arxiv.org/pdf/1801.08186.pdf), which achieves state-of-art performance in CVPR2018 (2018.07).
+<table width="100%">
+<tr>
+<td><img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg", alt="Mountain View" width="95%"></td>
+</tr>
+</table>
 
 ## Prerequisites
 
@@ -15,6 +20,7 @@ This repository is Pytorch implementation of [MattNet](https://arxiv.org/pdf/180
 
 ## Prepare submodules and data
 * **Mask R-CNN**: Follow the instructions of my [mask-faster-rcnn](https://github.com/lichengunc/mask-faster-rcnn) repo, preparing everything needed for `pyutils/mask-faster-rcnn`.
+You could use `cv/mrcn_detection.ipynb` to test if you've get Mask R-CNN ready.
 
 * **REFER data**: Use the download links of [REFER](https://github.com/lichengunc/refer), preparing the images and refcoco/refcoco+/refcocog annotations under `data/`.
 
@@ -44,6 +50,7 @@ CUDA_VISIBLE_DEVICES=id python tools/extract_mrcn_det_feats.py --dataset refcoco
 ```bash
 ./experiments/scripts/train_mattnet.sh GPU_ID refcoco unc
 ```
+During training, you may want to use `cv/inpect_cv.ipynb` to check the training/validation curves and do cross validation.
 
 ## Evaluation
 
@@ -58,11 +65,20 @@ If you detected/extracted the Mask R-CNN results already (step 3 above), now you
 ./experiments/scripts/eval_masks.sh GPU_ID refcoco unc
 ```
 
+## Demo
 
+Run `cv/example_demo.ipynb` for demo.
 
+## Authorship
 
+This project is maintained by [Licheng Yu](cs.unc.edu/~licheng/).
 
-
-
+## Citation
+  @article{yu2018mattnet,
+    title={MAttNet: Modular Attention Network for Referring Expression Comprehension},
+    author={Yu, Licheng and Lin, Zhe and Shen, Xiaohui and Yang, Jimei and Lu, Xin and Bansal, Mohit and Berg, Tamara L},
+    journal={arXiv preprint arXiv:1801.08186},
+    year={2018}
+  }
 
 
