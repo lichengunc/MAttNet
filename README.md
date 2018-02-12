@@ -1,15 +1,14 @@
 # MattNet
-Modular Attention Network for Referring Expression Comprehension
-
-<table width="70%">
-<tr>
-<td><img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg", alt="Mountain View" width="90%"></td>
-</tr>
-</table>
 
 ## Introduction
 
-This repository is Pytorch implementation of [MattNet](https://arxiv.org/pdf/1801.08186.pdf), which achieves state-of-art performance in CVPR2018 (2018.07).
+This repository is Pytorch implementation of [MattNet: Modular Attention Network for Referring Expression Comprehension](https://arxiv.org/pdf/1801.08186.pdf), which achieves state-of-art performance in CVPR2018 (2018.07).
+
+<table width="60%">
+<tr>
+<td><img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg", alt="Mountain View" width="80%"></td>
+</tr>
+</table>
 
 ## Prerequisites
 
