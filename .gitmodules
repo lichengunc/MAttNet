@@ -1,0 +1,9 @@
+[submodule "pyutils/mask-faster-rcnn"]
+	path = pyutils/mask-faster-rcnn
+	url = https://github.com/lichengunc/mask-faster-rcnn
+[submodule "pyutils/refer"]
+	path = pyutils/refer
+	url = https://github.com/lichengunc/refer
+[submodule "pyutils/refer-parser2"]
+	path = pyutils/refer-parser2
+	url = https://github.com/lichengunc/refer-parser2
