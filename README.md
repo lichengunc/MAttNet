@@ -1,9 +1,9 @@
 # MattNet
 Modular Attention Network for Referring Expression Comprehension
 
-<table width="80%">
+<table width="70%">
 <tr>
-<td><img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg", alt="Mountain View" width="95%"></td>
+<td><img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg", alt="Mountain View" width="90%"></td>
 </tr>
 </table>
 
