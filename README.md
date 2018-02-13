@@ -17,7 +17,7 @@ Examples are shown as follows:
 
 * Python 2.7
 * Pytorch 0.2 or higher
-* CUDA 8.0 or higher
+* CUDA 8.0
 
 ## Installation
 
