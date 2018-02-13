@@ -70,7 +70,7 @@ If you detected/extracted the Mask R-CNN results already (step 3 above), now you
 
 ## Pre-trained Models
 
-In order to get the results in our paper, please follow [Training Step 1-3](#Training) for data and feature preparation then run [Evaluation Step 1](#Evaluation).
+In order to get the results in our paper, please follow [Training Step 1-3](#training) for data and feature preparation then run [Evaluation Step 1](#evaluation).
 We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download and put them under `./output` folder.
 
 1) RefCOCO: [pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco_unc.zip)
@@ -107,13 +107,13 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 |--|--|--|
 | 65.33\% | 71.62\% | 56.02\% |
 </td><td>
-  
+
 | val | test A | test B |
 |--|--|--|
 | 64.11\% | 70.12\% | 54.82\% |
 </td></tr> </table>
 
-3) RefCOCOg: [pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcocog_umd.zip)
+3) RefCOCOg: [pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcocog_umd.zip) 
 <table>
 <tr><th> Localization (gt-box) </th><th> Localization (Mask R-CNN) </th><th> Segmentation (Mask R-CNN) </th></tr>
 <tr><td>
