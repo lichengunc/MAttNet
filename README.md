@@ -75,24 +75,18 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 
 1) Bounding-box localization via referring expression
 <table>
-  <tr><th> Ground-truth Box </th><th> Detected Regions </th></tr>
-  <tr>
-    <td>
+<tr><th> Ground-truth Box </th><th> Detected Regions </th></tr>
+<tr><td>
 
-      | val | testA | testB
-      |--|--|--|
-      | 85.57\% | 85.95\% | 84.36\% |
+| val | test A | test B |
+|--|--|--|
+| 85.57\% | 85.95\% | 84.36\% |
+</td><td>
 
-    </td>
-    <td>
-
-      | val | testA | testB
-      |--|--|--|
-      | 76.65\% | 81.14\% | 69.99\% |
-
-    </td>
-  </tr>
-</table>
+| val | test A | test B |
+|--|--|--|
+| 76.65\% | 81.14\% | 69.99\% |
+</td></tr> </table>
 
  
 
