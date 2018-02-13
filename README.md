@@ -68,6 +68,34 @@ If you detected/extracted the Mask R-CNN results already (step 3 above), now you
 ./experiments/scripts/eval_masks.sh GPU_ID refcoco unc
 ```
 
+## Pre-trained Models
+
+In order to get the results in our paper, please follow [Training Step 1-3](#Training) for data and feature preparation then run [Evaluation Step 1](#Evaluation).
+We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download and put them under `output` folder.
+
+1) Bounding-box localization via referring expression
+<table>
+  <tr><th> Ground-truth Box </th><th> Detected Regions </th></tr>
+  <tr>
+    <td>
+      | val | testA | testB
+      |--|--|--|
+      | 85.57\% | 85.95\% | 84.36\% |
+    </td>
+  </tr>
+  <tr>
+    <td>
+      | val | testA | testB
+      |--|--|--|
+      | 76.65\% | 81.14\% | 69.99\% |
+    </td>
+  </tr>
+</table>
+
+ 
+
+
+
 ## Demo
 
 Run `cv/example_demo.ipynb` for demo. 
