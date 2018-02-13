@@ -75,7 +75,7 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 
 1) RefCOCO: [pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco_unc.zip)
 <table>
-<tr><th> Localization (gt-box) </th><th> Localization </th><th> Segmentation (Pr0.5) </th></tr>
+<tr><th> Localization (gt-box) </th><th> Localization </th><th> Segmentation (P\@0.5) </th></tr>
 <tr><td>
 
 | val | test A | test B |
