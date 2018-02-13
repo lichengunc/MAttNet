@@ -73,10 +73,9 @@ If you detected/extracted the Mask R-CNN results already (step 3 above), now you
 In order to get the results in our paper, please follow [Training Step 1-3](#Training) for data and feature preparation then run [Evaluation Step 1](#Evaluation).
 We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download and put them under `./output` folder.
 
-* Bounding-box localization via referring expression
 1) RefCOCO: [pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco_unc.zip)
 <table>
-<tr><th> Ground-truth Box </th><th> Detected Regions </th></tr>
+<tr><th> Localization (gt-box) </th><th> Localization </th><th> Segmentation (Pr0.5) </th></tr>
 <tr><td>
 
 | val | test A | test B |
@@ -87,6 +86,11 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 | val | test A | test B |
 |--|--|--|
 | 76.65\% | 81.14\% | 69.99\% |
+</td><td>
+
+| val | test A | test B |
+|--|--|--|
+| 75.16\% | 79.55\% | 68.87\% |
 </td></tr> </table>
 
 2) RefCOCO+: [pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco+_unc.zip)
@@ -110,12 +114,12 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 <tr><td>
 
 | val | test |
-|--|--|--|
+|--|--|
 | 78.96\% | 78.51\% |
 </td><td>
 
 | val | test |
-|--|--|--|
+|--|--|
 | 66.58\% | 67.27\% |
 </td></tr> </table>
 
