@@ -137,11 +137,9 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 
 ## Demo
 
-Run `cv/example_demo.ipynb` for demo. 
+Run `cv/example_demo.ipynb` for demo example. 
+You can also check our **[Online Demo](http://gpuvision.cs.unc.edu/refer/comprehension)**.
 
-## Authorship
-
-This project is maintained by [Licheng Yu](http://cs.unc.edu/~licheng/).
 
 ## Citation
 
@@ -151,5 +149,9 @@ This project is maintained by [Licheng Yu](http://cs.unc.edu/~licheng/).
       journal={arXiv preprint arXiv:1801.08186},
       year={2018}
     }
+
+## Authorship
+
+This project is maintained by [Licheng Yu](http://cs.unc.edu/~licheng/).
 
 
