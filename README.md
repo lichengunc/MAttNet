@@ -1,14 +1,14 @@
-# MattNet
+# PyTorch Implementation of MattNet
 
 ## Introduction
 
-This repository is Pytorch implementation of [MattNet: Modular Attention Network for Referring Expression Comprehension](https://arxiv.org/pdf/1801.08186.pdf), which achieves state-of-art performance in CVPR2018 (2018.07).
+This repository is Pytorch implementation of [MattNet: Modular Attention Network for Referring Expression Comprehension](https://arxiv.org/pdf/1801.08186.pdf) in [CVPR 2018](http://cvpr2018.thecvf.com/), which achieves state-of-art performance for both bounding-box localization and segmentation tasks.
 
-<!-- <table width="60%">
-<tr>
-<td><img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg", alt="Mountain View" width="80%"></td>
-</tr>
-</table> -->
+Refering Expressions are natural language utterances that indicate particular objects within a scene, e.g., "the woman in red sweater", "the man on the right", etc.
+For robots or other intelligent agents communicating with people in the world, the ability to accurately comprehend such expressions will be a necessary component for natural interactions.
+In this project, we address referring expression comprehension: localizing an image region described by a natural language expression. 
+Examples are shown as follows:
+
 <p align="center">
   <img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg" width="80%"/>
 </p>
