@@ -6,7 +6,7 @@ This repository is Pytorch implementation of [MattNet: Modular Attention Network
 Refering Expressions are natural language utterances that indicate particular objects within a scene, e.g., "the woman in red sweater", "the man on the right", etc.
 For robots or other intelligent agents communicating with people in the world, the ability to accurately comprehend such expressions will be a necessary component for natural interactions.
 In this project, we address referring expression comprehension: localizing an image region described by a natural language expression. 
-Check our [paper](https://arxiv.org/pdf/1801.08186.pdf) and [online demo]((http://gpuvision.cs.unc.edu/refer/comprehension)) for the model details.
+Check our [paper](https://arxiv.org/pdf/1801.08186.pdf) and [online demo](http://gpuvision.cs.unc.edu/refer/comprehension) for the model details.
 Examples are shown as follows:
 
 <p align="center">
