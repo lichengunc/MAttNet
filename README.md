@@ -75,7 +75,7 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 
 1) RefCOCO: [pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco_unc.zip)
 <table>
-<tr><th> Localization (gt-box) </th><th> Localization </th><th> Segmentation (Pr@0.5) </th></tr>
+<tr><th> Localization (gt-box) </th><th> Localization (Mask R-CNN) </th><th> Segmentation (Mask R-CNN) </th></tr>
 <tr><td>
 
 | val | test A | test B |
@@ -95,7 +95,7 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 
 2) RefCOCO+: [pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco+_unc.zip)
 <table>
-<tr><th> Ground-truth Box </th><th> Detected Regions </th></tr>
+<tr><th> Localization (gt-box) </th><th> Localization (Mask R-CNN) </th><th> Segmentation (Mask R-CNN) </th></tr>
 <tr><td>
 
 | val | test A | test B |
@@ -106,11 +106,15 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 | val | test A | test B |
 |--|--|--|
 | 65.33\% | 71.62\% | 56.02\% |
+
+| val | test A | test B |
+|--|--|--|
+| 64.11\% | 70.12\% | 54.82\% |
 </td></tr> </table>
 
 3) RefCOCOg: [pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcocog_umd.zip)
 <table>
-<tr><th> Ground-truth Box </th><th> Detected Regions </th></tr>
+<tr><th> Localization (gt-box) </th><th> Localization (Mask R-CNN) </th><th> Segmentation (Mask R-CNN) </th></tr>
 <tr><td>
 
 | val | test |
@@ -121,6 +125,11 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 | val | test |
 |--|--|
 | 66.58\% | 67.27\% |
+</td><td>
+
+| val | test |
+|--|--|
+| 64.48\% | 65.60\% |
 </td></tr> </table>
 
 
