@@ -18,7 +18,7 @@ Examples are shown as follows:
 * Python 2.7
 * Pytorch 0.2 or higher
 * CUDA 8.0 or higher
-* requirements.txt in mask-faster-rcnn](https://github.com/lichengunc/mask-faster-rcnn), check installation.
+* requirements.txt in [mask-faster-rcnn](https://github.com/lichengunc/mask-faster-rcnn), check installation.
 
 ## Installation
 
