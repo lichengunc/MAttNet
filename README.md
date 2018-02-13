@@ -106,7 +106,8 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 | val | test A | test B |
 |--|--|--|
 | 65.33\% | 71.62\% | 56.02\% |
-
+</td><td>
+  
 | val | test A | test B |
 |--|--|--|
 | 64.11\% | 70.12\% | 54.82\% |
