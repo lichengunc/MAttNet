@@ -22,12 +22,12 @@ Examples are shown as follows:
 
 
 ## Prepare submodules and data
-* **Mask R-CNN**: Follow the instructions of my [mask-faster-rcnn](https://github.com/lichengunc/mask-faster-rcnn) repo, preparing everything needed for `pyutils/mask-faster-rcnn`.
+* Mask R-CNN: Follow the instructions of my [mask-faster-rcnn](https://github.com/lichengunc/mask-faster-rcnn) repo, preparing everything needed for `pyutils/mask-faster-rcnn`.
 You could use `cv/mrcn_detection.ipynb` to test if you've get Mask R-CNN ready.
 
-* **REFER data**: Use the download links of [REFER](https://github.com/lichengunc/refer), preparing the images and refcoco/refcoco+/refcocog annotations under `data/`.
+* REFER data: Use the download links of [REFER](https://github.com/lichengunc/refer), preparing the images and refcoco/refcoco+/refcocog annotations under `data/`.
 
-* **refer-parser2**: Follow the instructions of [refer-parser2](https://github.com/lichengunc/refer-parser2) to extract the parsed expressions using [Vicente's R1-R7 attributes](http://tamaraberg.com/papers/referit.pdf). **Note** this sub-module is only used if you want to reproduce the training process.
+* refer-parser2: Follow the instructions of [refer-parser2](https://github.com/lichengunc/refer-parser2) to extract the parsed expressions using [Vicente's R1-R7 attributes](http://tamaraberg.com/papers/referit.pdf). **Note** this sub-module is only used if you want to reproduce the training process.
 
 
 ## Training
