@@ -50,9 +50,9 @@ CUDA_VISIBLE_DEVICES=gpu_id python tools/extract_mrcn_ann_feats.py --dataset ref
 
 3. Detect objects/masks and extract features (only needed if you want to evaluate the automatic comprehension). We empirically set the confidence threshold of Mask R-CNN as 0.65.
 ```bash
-CUDA_VISIBLE_DEVICES=id python tools/run_detect.py --dataset refcoco --splitBy unc --conf_thresh 0.65
-CUDA_VISIBLE_DEVICES=id python tools/run_detect_to_mask.py --dataset refcoco --splitBy unc
-CUDA_VISIBLE_DEVICES=id python tools/extract_mrcn_det_feats.py --dataset refcoco --splitBy unc
+CUDA_VISIBLE_DEVICES=gpu_id python tools/run_detect.py --dataset refcoco --splitBy unc --conf_thresh 0.65
+CUDA_VISIBLE_DEVICES=gpu_id python tools/run_detect_to_mask.py --dataset refcoco --splitBy unc
+CUDA_VISIBLE_DEVICES=gpu_id python tools/extract_mrcn_det_feats.py --dataset refcoco --splitBy unc
 ```
 
 4. Train MattNet with ground-truth annotation:
