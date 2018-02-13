@@ -75,6 +75,7 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 
 1) Bounding-box localization via referring expression
 <table>
+<tr>RefCOCO ([pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco_unc.zip))</tr>
 <tr><th> Ground-truth Box </th><th> Detected Regions </th></tr>
 <tr><td>
 
