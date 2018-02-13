@@ -21,13 +21,21 @@ Examples are shown as follows:
 * requirements.txt
 
 
-## Prepare submodules and data
+## Installation
+
+1. Clone the MattNet repository
+```
+git clone --recursive https://github.com/lichengunc/MattNet
+```
+
+2. Prepare the submodules and associated data
+
 * Mask R-CNN: Follow the instructions of my [mask-faster-rcnn](https://github.com/lichengunc/mask-faster-rcnn) repo, preparing everything needed for `pyutils/mask-faster-rcnn`.
 You could use `cv/mrcn_detection.ipynb` to test if you've get Mask R-CNN ready.
 
-* REFER data: Use the download links of [REFER](https://github.com/lichengunc/refer), preparing the images and refcoco/refcoco+/refcocog annotations under `data/`.
+* REFER data: Use the download links of [REFER](https://github.com/lichengunc/refer) and go to the foloder running `make`. Follow `data/README.md` to prepare images and refcoco/refcoco+/refcocog annotations.
 
-* refer-parser2: Follow the instructions of [refer-parser2](https://github.com/lichengunc/refer-parser2) to extract the parsed expressions using [Vicente's R1-R7 attributes](http://tamaraberg.com/papers/referit.pdf). **Note** this sub-module is only used if you want to reproduce the training process.
+* refer-parser2: Follow the instructions of [refer-parser2](https://github.com/lichengunc/refer-parser2) to extract the parsed expressions using [Vicente's R1-R7 attributes](http://tamaraberg.com/papers/referit.pdf). **Note** this sub-module is only used if you want to train the models by yourself.
 
 
 ## Training
@@ -134,7 +142,6 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 </td></tr> </table>
 
 
-
 ## Demo
 
 Run `cv/example_demo.ipynb` for demo example. 
@@ -149,6 +156,10 @@ You can also check our **[Online Demo](http://gpuvision.cs.unc.edu/refer/compreh
       journal={arXiv preprint arXiv:1801.08186},
       year={2018}
     }
+
+## License
+
+MattNet is released under the MIT License (refer to the LICENSE file for details).
 
 ## Authorship
 
