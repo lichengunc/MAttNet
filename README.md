@@ -141,7 +141,7 @@ Run `cv/example_demo.ipynb` for demo.
 
 ## Authorship
 
-This project is maintained by [Licheng Yu](cs.unc.edu/~licheng/).
+This project is maintained by [Licheng Yu](http://cs.unc.edu/~licheng/).
 
 ## Citation
 
