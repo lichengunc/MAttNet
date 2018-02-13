@@ -78,16 +78,18 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
   <tr><th> Ground-truth Box </th><th> Detected Regions </th></tr>
   <tr>
     <td>
+
       | val | testA | testB
       |--|--|--|
       | 85.57\% | 85.95\% | 84.36\% |
+
     </td>
-  </tr>
-  <tr>
     <td>
+
       | val | testA | testB
       |--|--|--|
       | 76.65\% | 81.14\% | 69.99\% |
+
     </td>
   </tr>
 </table>
