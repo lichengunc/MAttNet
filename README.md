@@ -71,11 +71,11 @@ If you detected/extracted the Mask R-CNN results already (step 3 above), now you
 ## Pre-trained Models
 
 In order to get the results in our paper, please follow [Training Step 1-3](#Training) for data and feature preparation then run [Evaluation Step 1](#Evaluation).
-We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download and put them under `output` folder.
+We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download and put them under `./output` folder.
 
 1) Bounding-box localization via referring expression
+* RefCOCO: [pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco_unc.zip)
 <table>
-<tr>RefCOCO ([pre-trained model](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco_unc.zip))</tr>
 <tr><th> Ground-truth Box </th><th> Detected Regions </th></tr>
 <tr><td>
 
