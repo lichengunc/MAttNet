@@ -18,8 +18,7 @@ Examples are shown as follows:
 * Python 2.7
 * Pytorch 0.2 or higher
 * CUDA 8.0 or higher
-* requirements.txt
-
+* requirements.txt in mask-faster-rcnn](https://github.com/lichengunc/mask-faster-rcnn), check installation.
 
 ## Installation
 
@@ -39,7 +38,7 @@ You could use `cv/mrcn_detection.ipynb` to test if you've get Mask R-CNN ready.
 
 
 ## Training
-1. Prepare the training data by running `tools/prepro.py`:
+1. Prepare the training and evaluation data by running `tools/prepro.py`:
 ```
 python tools/prepro.py --dataset refcoco --splitBy unc
 ```
