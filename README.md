@@ -9,7 +9,9 @@ This repository is Pytorch implementation of [MattNet: Modular Attention Network
 <td><img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg", alt="Mountain View" width="80%"></td>
 </tr>
 </table> -->
-<img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg" width="80%" align="middle"/>
+<p align="center">
+  <img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg" width="80%"/>
+</p>
 
 ## Prerequisites
 
