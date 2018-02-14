@@ -23,9 +23,9 @@ Examples are shown as follows:
 
 1. Clone the MattNet repository
 
-```
-git clone --recursive https://github.com/lichengunc/MattNet
-```
+  ```bash
+  git clone --recursive https://github.com/lichengunc/MattNet
+  ```
 
 2. Prepare the submodules and associated data
 
@@ -40,46 +40,46 @@ You could use `cv/mrcn_detection.ipynb` to test if you've get Mask R-CNN ready.
 ## Training
 1. Prepare the training and evaluation data by running `tools/prepro.py`:
 
-```
-python tools/prepro.py --dataset refcoco --splitBy unc
-```
+  ```python
+  python tools/prepro.py --dataset refcoco --splitBy unc
+  ```
 
 2. Extract features using Mask R-CNN, where the `head_feats` are used in subject module training and `ann_feats` is used in relationship module training.
 
-```bash
-CUDA_VISIBLE_DEVICES=gpu_id python tools/extract_mrcn_head_feats.py --dataset refcoco --splitBy unc
-CUDA_VISIBLE_DEVICES=gpu_id python tools/extract_mrcn_ann_feats.py --dataset refcoco --splitBy unc
-```
+  ```python
+  CUDA_VISIBLE_DEVICES=gpu_id python tools/extract_mrcn_head_feats.py --dataset refcoco --splitBy unc
+  CUDA_VISIBLE_DEVICES=gpu_id python tools/extract_mrcn_ann_feats.py --dataset refcoco --splitBy unc
+  ```
 
 3. Detect objects/masks and extract features (only needed if you want to evaluate the automatic comprehension). We empirically set the confidence threshold of Mask R-CNN as 0.65.
 
-```bash
-CUDA_VISIBLE_DEVICES=gpu_id python tools/run_detect.py --dataset refcoco --splitBy unc --conf_thresh 0.65
-CUDA_VISIBLE_DEVICES=gpu_id python tools/run_detect_to_mask.py --dataset refcoco --splitBy unc
-CUDA_VISIBLE_DEVICES=gpu_id python tools/extract_mrcn_det_feats.py --dataset refcoco --splitBy unc
-```
+  ```python
+  CUDA_VISIBLE_DEVICES=gpu_id python tools/run_detect.py --dataset refcoco --splitBy unc --conf_thresh 0.65
+  CUDA_VISIBLE_DEVICES=gpu_id python tools/run_detect_to_mask.py --dataset refcoco --splitBy unc
+  CUDA_VISIBLE_DEVICES=gpu_id python tools/extract_mrcn_det_feats.py --dataset refcoco --splitBy unc
+  ```
 
 4. Train MattNet with ground-truth annotation:
 
-```bash
-./experiments/scripts/train_mattnet.sh GPU_ID refcoco unc
-```
+  ```bash
+  ./experiments/scripts/train_mattnet.sh GPU_ID refcoco unc
+  ```
 During training, you may want to use `cv/inpect_cv.ipynb` to check the training/validation curves and do cross validation.
 
 ## Evaluation
 
 Evaluate MattNet with ground-truth annotation:
 
-```bash
-./experiments/scripts/eval_easy.sh GPUID refcoco unc
-```
+  ```bash
+  ./experiments/scripts/eval_easy.sh GPUID refcoco unc
+  ```
 
 If you detected/extracted the Mask R-CNN results already (step 3 above), now you can evaluate the automatic comprehension accuracy using Mask R-CNN detection and segmentation:
 
-```bash
-./experiments/scripts/eval_dets.sh GPU_ID refcoco unc
-./experiments/scripts/eval_masks.sh GPU_ID refcoco unc
-```
+  ```bash
+  ./experiments/scripts/eval_dets.sh GPU_ID refcoco unc
+  ./experiments/scripts/eval_masks.sh GPU_ID refcoco unc
+  ```
 
 ## Pre-trained Models
 
