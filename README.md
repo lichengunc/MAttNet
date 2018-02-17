@@ -1,8 +1,8 @@
-# PyTorch Implementation of MattNet
+# PyTorch Implementation of MAttNet
 
 ## Introduction
 
-This repository is Pytorch implementation of [MattNet: Modular Attention Network for Referring Expression Comprehension](https://arxiv.org/pdf/1801.08186.pdf) in [CVPR 2018](http://cvpr2018.thecvf.com/).
+This repository is Pytorch implementation of [MAttNet: Modular Attention Network for Referring Expression Comprehension](https://arxiv.org/pdf/1801.08186.pdf) in [CVPR 2018](http://cvpr2018.thecvf.com/).
 Refering Expressions are natural language utterances that indicate particular objects within a scene, e.g., "the woman in red sweater", "the man on the right", etc.
 For robots or other intelligent agents communicating with people in the world, the ability to accurately comprehend such expressions will be a necessary component for natural interactions.
 In this project, we address referring expression comprehension: localizing an image region described by a natural language expression. 
@@ -21,10 +21,10 @@ Examples are shown as follows:
 
 ## Installation
 
-1. Clone the MattNet repository
+1. Clone the MAttNet repository
 
 ```
-git clone --recursive https://github.com/lichengunc/MattNet
+git clone --recursive https://github.com/lichengunc/MAttNet
 ```
 
 2. Prepare the submodules and associated data
@@ -59,7 +59,7 @@ CUDA_VISIBLE_DEVICES=gpu_id python tools/run_detect_to_mask.py --dataset refcoco
 CUDA_VISIBLE_DEVICES=gpu_id python tools/extract_mrcn_det_feats.py --dataset refcoco --splitBy unc
 ```
 
-4. Train MattNet with ground-truth annotation:
+4. Train MAttNet with ground-truth annotation:
 
 ```bash
 ./experiments/scripts/train_mattnet.sh GPU_ID refcoco unc
@@ -68,7 +68,7 @@ During training, you may want to use `cv/inpect_cv.ipynb` to check the training/
 
 ## Evaluation
 
-Evaluate MattNet with ground-truth annotation:
+Evaluate MAttNet with ground-truth annotation:
 
 ```bash
 ./experiments/scripts/eval_easy.sh GPUID refcoco unc
@@ -164,7 +164,7 @@ You can also check our [Online Demo](http://gpuvision.cs.unc.edu/refer/comprehen
 
 ## License
 
-MattNet is released under the MIT License (refer to the LICENSE file for details).
+MAttNet is released under the MIT License (refer to the LICENSE file for details).
 
 ## Authorship
 
