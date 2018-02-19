@@ -166,8 +166,36 @@ You can also check our [Online Demo](http://vision2.cs.unc.edu/refer/comprehensi
 
 MAttNet is released under the MIT License (refer to the LICENSE file for details).
 
+
 ## Authorship
 
 This project is maintained by [Licheng Yu](http://cs.unc.edu/~licheng/).
+
+
+## A few notes
+
+I'd like to share several thoughts after working on Referring Expressions for 3 years (since 2015):
+
+* Model improvement: I'm satisfied with this model architecture but still feel the context information is not fully exploited. We tried the context of visual comparison in our [ECCV2016](https://arxiv.org/pdf/1608.00272.pdf). It worked well but relied too much on the detector. That's why I removed the appearance difference in this paper. (Location comparison still remains as it's really important.) I'm looking forward to seeing more robust and interesting context proposed in the future. 
+Another direction is the end-to-end multi-task training. Current model loses some concepts after going through Mask R-CNN. For example, Mask R-CNN can perfectly detect (big) ``sports ball`` in an image but MAttNet can no longer recognize it. The reason is we are training the two models seperately and our RefCOCO dataset do not have ball-related expressions.
+
+* Data collection: Larger Referring Expressions dataset is apparently the most straight-forward and effective way for the performance improvement. You might have two questions: 1) What data should we collect? 2) How do we collect the dataset? 
+A larger Referring Expression dataset covering the whole MS COCO is expected of course. 
+This will also make end-to-end learning possible in the future.
+Task-specific dataset is also interesting.
+Since [ReferIt Game](http://tamaraberg.com/referitgame/), there have been multiple datasets in different domains, e.g., [video](https://arxiv.org/pdf/1708.01641v1.pdf), [dialogue](https://arxiv.org/pdf/1611.08481v2.pdf) and [spoken language](https://arxiv.org/pdf/1711.03800v2.pdf).
+Note you may be careful about the problem setting. 
+Randomly fitting referring expressions into a task (just for paper publication) is boring.
+As for the collection method, I prefer the way used in our ealy work [ReferIt Game](http://tamaraberg.com/referitgame/). The collected expressions might be slightly short (compared with image captioning datasets), but that is how we naturally refer things in our daily life. 
+
+* Borrowing external concepts: Current datasets (RefCOCO, RefCOCO+, RefCOCOg) have bias toward person-centric expressions. Around half of the expressions are related to person. However in real life people may also be interested in referring other common objects (cup, bottle, book) or even stuff (sky, tree or building). Considering RefCOCO already provides common referring expression structure, the (only) piece left is getting universal objects/stuff concepts, which could be borrowed from external datasets/tasks.
+
+* Referring Expression Generation (REG): Surprisingly few paper works on referring expression generation task so far! Dialogue is important. Referring to things is always the first step for computer-to-human interaction.
+(I don't think people would love to use a passive computer or robot which cannot talk.)
+In our [CVPR2017](https://arxiv.org/pdf/1612.09542.pdf), we actually collected more testing expressions for better REG generation. Check [REFER2](https://github.com/lichengunc/refer2) for the data. The only difference with [REFER](https://github.com/lichengunc/refer) is it contains more testing expressions on RefCOCO and RefCOCO+.
+While we acieved the SOA results in the paper, there should be plentiful space for further improvement. 
+Our speaker model in [CVPR2017](https://arxiv.org/pdf/1612.09542.pdf) can only utter some "boring" and "safe" expressions, thus cannot well specify every object in an image.
+GAN or a Modular Speaker might be effective weapon.
+
 
 
