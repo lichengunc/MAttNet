@@ -10,7 +10,7 @@ Check our [paper](https://arxiv.org/pdf/1801.08186.pdf) and [online demo](http:/
 Examples are shown as follows:
 
 <p align="center">
-  <img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg" width="80%"/>
+  <img src="http://bvisionweb1.cs.unc.edu/licheng/MattNet/mattnet_example.jpg" width="75%"/>
 </p>
 
 ## Prerequisites
@@ -190,7 +190,7 @@ Task-specific dataset is also interesting.
 Since [ReferIt Game](http://tamaraberg.com/referitgame/), there have been several datasets in different domains, e.g., [video](https://arxiv.org/pdf/1708.01641v1.pdf), [dialogue](https://arxiv.org/pdf/1611.08481v2.pdf) and [spoken language](https://arxiv.org/pdf/1711.03800v2.pdf).
 Note you may be careful about the problem setting. 
 Randomly fitting referring expressions into a task (just for paper publication) is boring.
-As for the collection method, I prefer the way used in our ealy work [ReferIt Game](http://tamaraberg.com/referitgame/). The collected expressions might be slightly short (compared with image captioning datasets), but that is how we naturally refer things in our daily life.
+As for the collection method, I prefer the way used in our ealy work [ReferIt Game](http://tamaraberg.com/referitgame/). The collected expressions might be slightly short (compared with image captioning datasets), but that is how we refer things naturally in daily life.
 
 ## Authorship
 
