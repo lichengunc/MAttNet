@@ -3,6 +3,7 @@ This directory should contain the following data:
 $COCO_PATH
 ├── images
 │   ├── mscoco
+│   │   └──train2014 (contains all RefCOCO, RefCOCO+, RefCOCOg images)
 │   └── saiaprtc12
 ├── refcoco
 │   ├── instances.json
