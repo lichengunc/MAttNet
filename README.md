@@ -6,7 +6,7 @@ This repository is Pytorch implementation of [MAttNet: Modular Attention Network
 Refering Expressions are natural language utterances that indicate particular objects within a scene, e.g., "the woman in red sweater", "the man on the right", etc.
 For robots or other intelligent agents communicating with people in the world, the ability to accurately comprehend such expressions will be a necessary component for natural interactions.
 In this project, we address referring expression comprehension: localizing an image region described by a natural language expression. 
-Check our [paper](https://arxiv.org/pdf/1801.08186.pdf) and [online demo](http://gpuvision.cs.unc.edu/refer/comprehension) for more details.
+Check our [paper](https://arxiv.org/pdf/1801.08186.pdf) and [online demo](http://vision2.cs.unc.edu/refer/comprehension) for more details.
 Examples are shown as follows:
 
 <p align="center">
@@ -150,7 +150,7 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 ## Demo
 
 Run `cv/example_demo.ipynb` for demo example. 
-You can also check our [Online Demo](http://gpuvision.cs.unc.edu/refer/comprehension).
+You can also check our [Online Demo](http://vision2.cs.unc.edu/refer/comprehension).
 
 
 ## Citation
