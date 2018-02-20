@@ -179,11 +179,11 @@ Another direction is the end-to-end multi-task training. Current model loses som
 * **Referring Expression Generation (REG)**: Surprisingly few paper works on referring expression generation task so far! Dialogue is important. Referring to things is always the first step for computer-to-human interaction.
 (I don't think people would love to use a passive computer or robot which cannot talk.)
 In our [CVPR2017](https://arxiv.org/pdf/1612.09542.pdf), we actually collected more testing expressions for better REG evaluation. (Check [REFER2](https://github.com/lichengunc/refer2) for the data. The only difference with [REFER](https://github.com/lichengunc/refer) is it contains more testing expressions on RefCOCO and RefCOCO+.)
-While we acieved the SOA results in the paper, there should be plentiful space for further improvement. 
+While we achieved the SOA results in the paper, there should be plentiful space for further improvement. 
 Our speaker model can only utter "boring" and "safe" expressions, thus cannot well specify every object in an image.
 GAN or a Modular Speaker might be effective weapons as future work.
 
-* **Data Collection**: Larger Referring Expressions dataset is apparently the most straight-forward and effective way for the performance improvement. You might have two questions: 1) What data should we collect? 2) How do we collect the dataset? 
+* **Data Collection**: Larger Referring Expressions dataset is apparently the most straight-forward way to improve the performance of any model. You might have two questions: 1) What data should we collect? 2) How do we collect the dataset? 
 A larger Referring Expression dataset covering the whole MS COCO is expected (of course). 
 This will also make end-to-end learning possible in the future.
 Task-specific dataset is also interesting.
