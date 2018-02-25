@@ -380,7 +380,7 @@ class GtMRCNLoader(Loader):
     topK = opt['num_cxt']
     cxt_feats = np.zeros((len(ann_ids), topK, self.fc7_dim), dtype=np.float32)  
     cxt_lfeats = np.zeros((len(ann_ids), topK, 5), dtype=np.float32)
-    cxt_ann_ids = -np.ones((len(ann_ids), topK), dtype=np.int32) # (#ann_ids, topK)
+    cxt_ann_ids = [[-1 for _ in range(topK)] for _ in range(len(ann_ids))] # (#ann_ids, topK)
     for i, ref_ann_id in enumerate(ann_ids):
       # reference box
       rbox = self.Anns[ref_ann_id]['box']
@@ -398,9 +398,8 @@ class GtMRCNLoader(Loader):
         cx1, cy1, cw, ch = cbox[0], cbox[1], cbox[2], cbox[3]
         cxt_lfeats[i, j, :] = np.array([(cx1-rcx)/rw, (cy1-rcy)/rh, (cx1+cw-rcx)/rw, (cy1+ch-rcy)/rh, cw*ch/(rw*rh)])
         cxt_feats[i, j, :] = self.feats['ann']['fc7'][cand_ann['h5_id'], :]
-        cxt_ann_ids[i, j] = cand_ann_id
+        cxt_ann_ids[i][j] = cand_ann_id
 
-    cxt_ann_ids = cxt_ann_ids.tolist()
     return cxt_feats, cxt_lfeats, cxt_ann_ids
 
 
