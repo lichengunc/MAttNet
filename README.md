@@ -158,7 +158,7 @@ You can also check our [Online Demo](http://vision2.cs.unc.edu/refer/comprehensi
     @article{yu2018mattnet,
       title={MAttNet: Modular Attention Network for Referring Expression Comprehension},
       author={Yu, Licheng and Lin, Zhe and Shen, Xiaohui and Yang, Jimei and Lu, Xin and Bansal, Mohit and Berg, Tamara L},
-      journal={arXiv preprint arXiv:1801.08186},
+      booktitle={CVPR},
       year={2018}
     }
 
