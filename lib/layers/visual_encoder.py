@@ -114,6 +114,37 @@ class SubjectEncoder(nn.Module):
 
     return weighted_visual_feats, attn, att_scores
 
+  def extract_subj_feats(self, pool5, fc7):
+    """Inputs
+    - pool5     : (n, 1024, 7, 7)
+    - fc7       : (n, 2048, 7, 7)
+    Outputs
+    - visual_out: (n, fc7_dim + att_dim)
+    - att_scores: (n, num_atts)
+    """
+    batch, grids = pool5.size(0), pool5.size(2)*pool5.size(3)
+
+    # normalize and reshape pool5 & fc7
+    pool5 = pool5.view(batch, self.pool5_dim, -1) # (n, 1024, 49)
+    pool5 = pool5.transpose(1,2).contiguous().view(-1, self.pool5_dim) # (nx49, 1024)
+    pool5 = self.pool5_normalizer(pool5) # (nx49, 1024)
+    fc7 = fc7.view(batch, self.fc7_dim, -1)  # (n, 2048, 49)
+    fc7 = fc7.transpose(1,2).contiguous().view(-1, self.fc7_dim) # (n x 49, 2048)
+    fc7 = self.fc7_normalizer(fc7) # (nx49, 2048)
+
+    # att_feats   
+    att_feats = self.att_fuse(torch.cat([pool5, fc7], 1)) # (nx49, 512)
+
+    # predict atts
+    avg_att_feats = att_feats.view(batch, -1, self.jemb_dim).mean(1) # (n, 512)
+    avg_att_feats = self.att_dropout(avg_att_feats) # dropout
+    att_scores = self.att_fc(avg_att_feats) # (n, num_atts)
+
+    # compute spatial attention
+    att_feats = self.att_normalizer(att_feats)     # (nx49, 512)
+    visual_feats = torch.cat([fc7, att_feats], 1)  # (nx49, 2048+512)
+
+    return visual_feats, att_scores
 
 """
 Takes relative location (n, c, 5) and object features (n, c, 2048) as inputs, then
