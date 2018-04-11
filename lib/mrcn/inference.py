@@ -144,6 +144,7 @@ class Inference:
     rles = []
     for m in masks:
       rle = COCOmask.encode(np.asfortranarray(m))
+      rle['counts'] = rle['counts'].decode('ascii')
       rles += [rle]
 
     return masks, rles

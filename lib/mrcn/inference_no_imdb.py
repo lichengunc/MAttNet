@@ -259,7 +259,7 @@ class Inference:
 
     fc7 = self.net._head_to_tail(pool5)  # (n, 2048, 7, 7)
     pool5 = pool5.mean(3).mean(2)
-    fc7 = fc7.mean(3).mean(2)  # (n, 2048)
+    fc7 = fc7.mean(3, keepdim=True).mean(2, keepdim=True)  # (n, 2048)
     return pool5, fc7
 
   def box_to_fc7(self, net_conv, im_info, ori_boxes):

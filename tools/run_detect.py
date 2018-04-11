@@ -85,10 +85,10 @@ def main(args):
     scores, boxes = mrcn.predict(img_path)
 
     # get cls_to_dets, class_name -> [xyxysc] (n, 5)
-    cls_to_dets, num_dets = cls_to_detections(scores, boxes, imdb, args.nms_thresh, args.conf_thresh)
+    cls_to_dets, num_dets = cls_to_detections(scores, boxes, imdb, args.nms_thresh, float(args.conf_thresh))
 
     # make sure num_dets > 0 for this image, otherwise we lower down the conf_thresh
-    thresh = args.conf_thresh
+    thresh = float(args.conf_thresh)
     while num_dets == 0:
       thresh = thresh-0.1
       cls_to_dets, num_dets = cls_to_detections(scores, boxes, imdb, args.nms_thresh, thresh)
