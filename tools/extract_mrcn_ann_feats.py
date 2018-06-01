@@ -71,7 +71,6 @@ def ann_to_pool5_fc7(mrcn, ann, net_conv, im_info):
   box = np.array([ann['box']])  # [[xywh]]
   box = xywh_to_xyxy(box)  # [[x1y1x2y2]]
   pool5, fc7 = mrcn.box_to_pool5_fc7(Variable(torch.from_numpy(net_conv).cuda()), im_info, box)  # (1, 2048)
-  fc7 = fc7.mean(3).mean(2)
   return pool5, fc7
 
 def main(args):
