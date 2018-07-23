@@ -58,7 +58,6 @@ CUDA_VISIBLE_DEVICES=gpu_id python tools/run_detect.py --dataset refcoco --split
 CUDA_VISIBLE_DEVICES=gpu_id python tools/run_detect_to_mask.py --dataset refcoco --splitBy unc
 CUDA_VISIBLE_DEVICES=gpu_id python tools/extract_mrcn_det_feats.py --dataset refcoco --splitBy unc
 ```
-We provide the [detected boxes/masks](http://bvision.cs.unc.edu/licheng/MattNet/detections.zip) for those interested in automatic comprehension. **Note** our Mask R-CNN is trained on COCO’s training images, <span style="color:red">**excluding**</span> those in RefCOCO, RefCOCO+, and RefCOCOg’s validation+testing. That said it is unfair to use off-the-shelf detector trained on whole COCO set for this task.
 
 4. Train MAttNet with ground-truth annotation:
 
@@ -147,6 +146,12 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 | 64.48\% | 65.60\% |
 </td></tr> </table>
 
+
+## Pre-computed detections/masks
+We provide the [detected boxes/masks](http://bvision.cs.unc.edu/licheng/MattNet/detections.zip) for those who are interested in automatic comprehension.
+This was done using [Training Step 3](#training).
+**Note** our Mask R-CNN is trained on COCO’s training images, **excluding** those in RefCOCO, RefCOCO+, and RefCOCOg’s validation+testing. 
+That said it is unfair to use the other off-the-shelf detectors trained on whole COCO set for this task.
 
 ## Demo
 
