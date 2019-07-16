@@ -16,7 +16,7 @@ Examples are shown as follows:
 ## Prerequisites
 
 * Python 2.7
-* Pytorch 0.2 or higher
+* Pytorch 0.2 (may not work with 1.0 or higher)
 * CUDA 8.0
 
 ## Installation
