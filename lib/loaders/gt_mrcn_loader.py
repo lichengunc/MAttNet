@@ -247,7 +247,7 @@ class GtMRCNLoader(Loader):
       elif len(dt_ann_ids) > 0:
         neg_ann_id = random.choice(dt_ann_ids)
       else:
-        neg_ann_id = random.choice(self.Anns.keys())
+        neg_ann_id = random.choice(list(self.Anns.keys()))
       neg_ann_ids += [neg_ann_id]
       # neg_ref_id for negative language representations: mainly from same-type "referred" objects
       if len(st_ref_ids) > 0 and np.random.uniform(0, 1, 1) < sample_ratio:
@@ -255,7 +255,7 @@ class GtMRCNLoader(Loader):
       elif len(dt_ref_ids) > 0:
         neg_ref_id = random.choice(dt_ref_ids)
       else:
-        neg_ref_id = random.choice(self.Refs.keys())
+        neg_ref_id = random.choice(list(self.Refs.keys()))
       neg_sent_id = random.choice(self.Refs[neg_ref_id]['sent_ids'])
       neg_sent_ids += [neg_sent_id]
 
@@ -284,9 +284,29 @@ class GtMRCNLoader(Loader):
       else:
         return 1
     image = self.Images[ref_ann['image_id']]        
-        
+    
+    def cmp_to_key(mycmp):
+        'Convert a cmp= function into a key= function'
+        class K(object):
+            def __init__(self, obj, *args):
+                self.obj = obj
+            def __lt__(self, other):
+                return mycmp(self.obj, other.obj) < 0
+            def __gt__(self, other):
+                return mycmp(self.obj, other.obj) > 0
+            def __eq__(self, other):
+                return mycmp(self.obj, other.obj) == 0
+            def __le__(self, other):
+                return mycmp(self.obj, other.obj) <= 0  
+            def __ge__(self, other):
+                return mycmp(self.obj, other.obj) >= 0
+            def __ne__(self, other):
+                return mycmp(self.obj, other.obj) != 0
+        return K
+    
     ann_ids = list(image['ann_ids'])  # copy in case the raw list is changed
-    ann_ids = sorted(ann_ids, cmp=compare)
+    #ann_ids = sorted(ann_ids, cmp=compare)
+    ann_ids = sorted(ann_ids, key=cmp_to_key(compare))
 
     st_ref_ids, st_ann_ids, dt_ref_ids, dt_ann_ids = [], [], [], []
     for ann_id in ann_ids:
