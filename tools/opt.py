@@ -8,11 +8,9 @@ def parse_opt():
     parser.add_argument('--dataset', type=str, default='refcoco', help='name of dataset')
     parser.add_argument('--splitBy', type=str, default='unc', help='who splits this dataset')
     parser.add_argument('--start_from', type=str, default=None, help='continuing training from saved model')
-    # FRCN setting
-    parser.add_argument('--imdb_name', default='coco_minus_refer', help='image databased trained on.')
-    parser.add_argument('--net_name', default='res101', help='net_name: res101 or vgg16')
-    parser.add_argument('--iters', default=1250000, type=int, help='iterations we trained for faster R-CNN')
-    parser.add_argument('--tag', default='notime', help='on default tf, don\'t change this!')
+    parser.add_argument('--gd_feats_dir', default='cache/feats/visual_grounding_coco_gt')
+    parser.add_argument('--det_feats_dir', default='cache/feats/visual_grounding_det_coco')
+    parser.add_argument('--num_workers', type=int, default=2)
     # Visual Encoder Setting
     parser.add_argument('--visual_sample_ratio', type=float, default=0.3, help='ratio of same-type objects over different-type objects')
     parser.add_argument('--visual_fuse_mode', type=str, default='concat', help='concat or mul')
@@ -32,7 +30,7 @@ def parse_opt():
     parser.add_argument('--bidirectional', type=int, default=1, help='bi-rnn')
     parser.add_argument('--rnn_hidden_size', type=int, default=512, help='hidden size of LSTM')
     parser.add_argument('--rnn_type', type=str, default='lstm', help='rnn, gru or lstm')
-    parser.add_argument('--rnn_drop_out', type=float, default=0.2, help='dropout between stacked rnn layers')
+    parser.add_argument('--rnn_drop_out', type=float, default=0.0, help='dropout between stacked rnn layers')
     parser.add_argument('--rnn_num_layers', type=int, default=1, help='number of layers in lang_encoder')
     parser.add_argument('--variable_lengths', type=int, default=1, help='use variable length to encode') 
     # Joint Embedding setting
@@ -44,7 +42,8 @@ def parse_opt():
     parser.add_argument('--lang_rank_weight', type=float, default=1.0, help='weight on paired (ref, sent) over unpaired (ref, neg_sent)')
     parser.add_argument('--margin', type=float, default=0.1, help='margin for ranking loss')
     # Optimization: General
-    parser.add_argument('--max_iters', type=int, default=50000, help='max number of iterations to run') 
+    parser.add_argument('--max_epochs', type=int, default=25, help='max number of epochs to run')
+    parser.add_argument('--max_iters', type=int, default=30000, help='max number of iterations to run') 
     parser.add_argument('--sample_ratio', type=float, default=0.3, help='ratio of same-type objects over different-type objects')
     parser.add_argument('--batch_size', type=int, default=15, help='batch size in number of images per batch')
     parser.add_argument('--grad_clip', type=float, default=0.1, help='clip gradients at this value')

@@ -1,15 +1,8 @@
 
-
 GPU_ID=$1
 DATASET=$2
 SPLITBY=$3
-
-# IMDB="coco_minus_refer"
-# ITERS=1150000
-# TAG="notime"
-# NET="res101"
-ID="mrcn_cmr_with_st"
-# ID="mrcn_dets_cmr_with_st"
+ID=$4
 
 case ${DATASET} in
     refcoco)
