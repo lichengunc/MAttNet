@@ -1,6 +1,6 @@
 # PyTorch Implementation of MAttNet
 
-***Announcement: some download links are (and will be) invalid for a while due to the webserver was down. The university is fixing it. Please ask around who has previously downloaded the datasets/detections for their usage.  Sorry for the trouble. We are trying to bring them back soon.***
+***Announcement: some download links are (and will be) invalid for a while due to the webserver was down. The university is fixing it. Please ask around who has previously downloaded the datasets/detections for their usage.  Sorry for the trouble. We are trying to bring them back soon. (2022/09/28)***
 
 
 ## Introduction
