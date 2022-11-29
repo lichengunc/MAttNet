@@ -89,7 +89,7 @@ If you detected/extracted the Mask R-CNN results already (step 3 above), now you
 In order to get the results in our paper, please follow [Training Step 1-3](#training) for data and feature preparation then run [Evaluation Step 1](#evaluation).
 We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download and put them under `./output` folder.
 
-1) RefCOCO: [Pre-trained model (56M)](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco_unc.zip)
+1) RefCOCO: [Pre-trained model (56M)](http://bvisionweb1.cs.unc.edu/licheng/MattNet/pretrained/refcoco_unc.zip)
 <table>
 <tr><th> Localization (gt-box) </th><th> Localization (Mask R-CNN) </th><th> Segmentation (Mask R-CNN) </th></tr>
 <tr><td>
@@ -109,7 +109,7 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 | 75.16\% | 79.55\% | 68.87\% |
 </td></tr> </table>
 
-2) RefCOCO+: [Pre-trained model (56M)](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcoco+_unc.zip)
+2) RefCOCO+: [Pre-trained model (56M)](http://bvisionweb1.cs.unc.edu/licheng/MattNet/pretrained/refcoco+_unc.zip)
 <table>
 <tr><th> Localization (gt-box) </th><th> Localization (Mask R-CNN) </th><th> Segmentation (Mask R-CNN) </th></tr>
 <tr><td>
@@ -129,7 +129,7 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 | 64.11\% | 70.12\% | 54.82\% |
 </td></tr> </table>
 
-3) RefCOCOg: [Pre-trained model (58M)](http://bvision.cs.unc.edu/licheng/MattNet/pretrained/refcocog_umd.zip) 
+3) RefCOCOg: [Pre-trained model (58M)](http://bvisionweb1.cs.unc.edu/licheng/MattNet/pretrained/refcocog_umd.zip) 
 <table>
 <tr><th> Localization (gt-box) </th><th> Localization (Mask R-CNN) </th><th> Segmentation (Mask R-CNN) </th></tr>
 <tr><td>
@@ -151,7 +151,7 @@ We provide the pre-trained models for RefCOCO, RefCOCO+ and RefCOCOg. Download a
 
 
 ## Pre-computed detections/masks
-We provide the [detected boxes/masks](http://bvision.cs.unc.edu/licheng/MattNet/detections.zip) for those who are interested in automatic comprehension.
+We provide the [detected boxes/masks](http://bvisionweb1.cs.unc.edu/licheng/MattNet/detections.zip) for those who are interested in automatic comprehension.
 This was done using [Training Step 3](#training).
 **Note** our Mask R-CNN is trained on COCO’s training images, **excluding** those in RefCOCO, RefCOCO+, and RefCOCOg’s validation+testing. 
 That said it is unfair to use the other off-the-shelf detectors trained on whole COCO set for this task.
