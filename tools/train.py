@@ -207,7 +207,8 @@ def main(args):
       infos['val_result_history'] = val_result_history
       infos['word_to_ix'] = loader.word_to_ix
       infos['att_to_ix'] = loader.att_to_ix
-      with open(osp.join(checkpoint_dir, opt['id']+'.json'), 'wb') as io:
+      #with open(osp.join(checkpoint_dir, opt['id']+'.json'), 'wb') as io:
+      with open(osp.join(checkpoint_dir, opt['id']+'.json'), 'w') as io:
         json.dump(infos, io)
         
     # update iter and epoch

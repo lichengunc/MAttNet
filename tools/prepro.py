@@ -68,7 +68,7 @@ def build_vocab(refer, params):
   vocab = good_words
 
   # add category words
-  category_names = refer.Cats.values() + ['__background__']
+  category_names = list(refer.Cats.values()) + ['__background__']
   for cat_name in category_names:
     for wd in cat_name.split():
       if wd not in word2count or word2count[wd] <= count_thr:
@@ -192,7 +192,7 @@ def build_att_vocab(refer, params, att_types=['r1', 'r2', 'r7']):
   sentToRef = refer.sentToRef
   ref_to_att_wds = {}
   forbidden = forbidden_noun + forbidden_att + forbidden_verb \
-              + refer.Cats.values() # we also forbid category name here
+              + list(refer.Cats.values()) # we also forbid category name here
   for sent in sents:
     sent_id = sent['sent_id']
     atts = sent['atts']

@@ -23,6 +23,9 @@ from pycocotools import mask as maskUtils
 
 # compute IoU
 def computeIoU(pred_rle, gd_rle):
+  #pred_rle['counts'] = pred_rle['counts'].encode('ascii')
+  #gd_rle['counts'] = gd_rle['counts'].encode('ascii')
+    
   pred_seg = maskUtils.decode(pred_rle) # (H, W)
   gd_seg = maskUtils.decode(gd_rle)     # (H, W)
   I = np.sum(np.logical_and(pred_seg, gd_seg))

@@ -59,6 +59,7 @@ def main(args):
   # load detections = [{det_id, box, image_id, category_id, category_name, score}]
   save_dir = osp.join('cache/detections', args.dataset+'_'+args.splitBy)
   detections = json.load(open(osp.join(save_dir, args.dets_file_name)))
+
   image_to_dets = {}
   for det in detections:
     image_id = det['image_id']
@@ -67,6 +68,7 @@ def main(args):
     image_to_dets[image_id] += [det]
 
   # run mask rcnn
+  #for i, image_id in enumerate(list(image_to_dets.keys())[:2]):
   for i, image_id in enumerate(image_to_dets.keys()):
     dets = image_to_dets[image_id]
 
@@ -89,6 +91,9 @@ def main(args):
 
   # save dets.json = [{det_id, box, image_id, score}]
   # to cache/detections/
+    
+  #print(detections[0])
+    
   save_path = osp.join(save_dir, args.dets_file_name[:-10] + '_masks.json')
   with open(save_path, 'w') as f:
     json.dump(detections, f)
